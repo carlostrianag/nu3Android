@@ -5,8 +5,33 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="mision_title">
+        Mision
+    </string>
+
+    <string name="vision_title">
+        Vision
+    </string>
+
+    <string name="value_title">
+        Values
+    </string>
+
     <string name="mision">
-        We are a non-profit organization that works to eradicate malnutrition and to support the integral development of the whole family in order to contribute to the decrease of the poverty cycle. Nu3 Foundation implements an innovating model that combines programs in Food Safety and Nutrition, Education, Health and Income Generation. We extend our actions to the Departments of Atlántico, Magdalena, Bolívar and Chocó.
+        Execute food safety and nutritional programs to diminish the levels of malnutrition in the most vulnerable population. Additionally, to implement education, health and enterprising strategies, which promote the integral development of the families and their children.
+    </string>
+
+    <string name="vision">
+        In 2015 we will be the leader social company in the Colombian Caribbean, with presence in other regions of the country, due to the quality of our service and the recovery of the population served.
+    </string>
+
+    <string name="values">
+        Transparency and Efficiency
+        Responsibility
+        Solidarity
+        Reliability
+        Human Quality
     </string>
 
     <!-- TODO: Remove or change this placeholder text -->
