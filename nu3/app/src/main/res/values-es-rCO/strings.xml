@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">nu3</string>
 
@@ -8,5 +9,4 @@
     <string name="mision">
         We are a non-profit organization that works to eradicate malnutrition and to support the integral development of the whole family in order to contribute to the decrease of the poverty cycle. Nu3 Foundation implements an innovating model that combines programs in Food Safety and Nutrition, Education, Health and Income Generation. We extend our actions to the Departments of Atlántico, Magdalena, Bolívar and Chocó.
     </string>
-
 </resources>
