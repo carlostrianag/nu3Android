@@ -1,13 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e6e6e6"
     tools:context=".views.TeamFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Equipo coleto" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/card_schraer" />
+        <include layout="@layout/card_zylberblum" />
+        <include layout="@layout/card_callejas" />
+        <include layout="@layout/card_soto" />
+        <include layout="@layout/card_lopez" />
 
-</FrameLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

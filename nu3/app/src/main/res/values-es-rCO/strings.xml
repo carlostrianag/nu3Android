@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">nu3</string>
+    <string name="app_name">Nu3</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_news_title">Noticias</string>
+    <string name="nav_history_title">Historia</string>
+    <string name="nav_our_team_title">Nuestro equipo</string>
+    <string name="nav_vision_title">Misión and visión</string>
+    <string name="nav_donate_title">Donar</string>
+
+    <!-- Team Names -->
+
+    <string name="president">Presidenta Junta Directiva</string>
+    <string name="vice_president">Vicepresidenta Junta Directiva</string>
+    <string name="executive_director">Directora Ejecutiva</string>
+    <string name="operations_supervisor">Jefe de Operaciones</string>
+    <string name="accounting_supervisor">Jefe Contable y Administrativa</string>
+
 
     <string name="action_settings">Settings</string>
     <string name="mision">

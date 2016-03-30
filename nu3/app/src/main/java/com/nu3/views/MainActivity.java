@@ -1,7 +1,9 @@
 package com.nu3.views;
 
+import android.app.ActionBar;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         if (savedInstanceState == null) {
             Fragment fragment = null;
@@ -122,8 +126,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_our_team) {
             fragmentClass = TeamFragment.class;
         } else if (id == R.id.nav_donate) {
-            fragmentClass = TeamFragment.class;
-        } else if (id == R.id.nav_send) {
             fragmentClass = TeamFragment.class;
         }
         try {

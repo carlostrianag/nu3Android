@@ -6,6 +6,22 @@
 
     <string name="action_settings">Settings</string>
 
+    <!-- Nav Items -->
+
+    <string name="nav_news_title">News</string>
+    <string name="nav_history_title">History</string>
+    <string name="nav_our_team_title">Our team</string>
+    <string name="nav_vision_title">Mision and vision</string>
+    <string name="nav_donate_title">Donate</string>
+
+    <!-- Team Names -->
+
+    <string name="president">President Board of Directors</string>
+    <string name="vice_president">Vice-President Board of Directors</string>
+    <string name="executive_director">Executive Director</string>
+    <string name="operations_supervisor">Operations Supervisor</string>
+    <string name="accounting_supervisor">Accounting and Administrative Supervisor</string>
+
     <string name="mision_title">
         Mision
     </string>
@@ -45,5 +61,5 @@
         Nu3 Foundation in an integral manner cares for over 13,000 beneficiaries (annual average), covering boys, girls, pregnant mothers, breast-feeding mothers, seniors, youngsters and their families, providing Food and Nutritional Safety Programs, together with strategies on Health, Education and Income Generation. The Foundation started in Barranquilla but our actions extended to the Departments of Atlántico, Bolívar, Magdalena and Chocó.
         In this manner, further than providing food and applying an educational model, nu3 Foundation works to help our beneficiaries achieve happiness, to work in their present for constructing a better future, surrounded by equality, equity, satisfaction of their basic needs and a quality of life full of opportunities for progress.
     </string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
