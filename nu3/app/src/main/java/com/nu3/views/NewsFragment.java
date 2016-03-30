@@ -3,6 +3,7 @@ package com.nu3.views;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,11 +30,12 @@ import utils.RestClient;
 public class NewsFragment extends Fragment {
 
     private TextView newsTextView;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     public NewsFragment() {
-        // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,6 +44,7 @@ public class NewsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_news, container, false);
 
         this.newsTextView = (TextView) view.findViewById(R.id.newsTextView);
+
 
         RestClient.get("/Z678310f?category=51", null, new JsonHttpResponseHandler() {
 
