@@ -7,7 +7,7 @@ import com.loopj.android.http.*;
 
 public class RestClient {
 
-    private static final String BASE_URL = "https://api.twitter.com/1/";
+    private static final String BASE_URL = "http://cms.maksuco.com/api/items/7";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 
