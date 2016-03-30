@@ -3,6 +3,7 @@ package com.nu3.views;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,11 +14,14 @@ import android.widget.TextView;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.nu3.R;
+import com.nu3.views.adapters.NewsAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 import models.News;
@@ -29,7 +33,6 @@ import utils.RestClient;
  */
 public class NewsFragment extends Fragment {
 
-    private TextView newsTextView;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -43,27 +46,32 @@ public class NewsFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_news, container, false);
 
-        this.newsTextView = (TextView) view.findViewById(R.id.newsTextView);
+        this.mRecyclerView = (RecyclerView) view.findViewById(R.id.newsRecyclerView);
 
+        this.mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+        this.mRecyclerView.setLayoutManager(mLayoutManager);
 
         RestClient.get("/Z678310f?category=51", null, new JsonHttpResponseHandler() {
-
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 super.onSuccess(statusCode, headers, response);
-                //Log.d("TAG", response.toString());
-                newsTextView.setText(response.toString());
+                ArrayList<News> newsList = new ArrayList<News>();
+
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject object = response.getJSONObject(i);
                         News news = new News();
                         news.setId(object.getInt("id"));
-                        news.setName(object.getString("name"));
-                        news.setDescriptionSpanish(object.getString("desc_es"));
+                        news.setName(object.getString("name").trim());
+                        news.setDescriptionSpanish(object.getString("desc_es").trim());
+                        newsList.add(news);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
+
+                mAdapter = new NewsAdapter(newsList);
+                mRecyclerView.setAdapter(mAdapter);
             }
 
             @Override
