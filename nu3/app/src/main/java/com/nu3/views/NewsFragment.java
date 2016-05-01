@@ -63,6 +63,7 @@ public class NewsFragment extends Fragment {
                         News news = new News();
                         news.setId(object.getInt("id"));
                         news.setName(object.getString("name").trim());
+                        news.setImageURL(object.getString("image"));
                         news.setDescriptionSpanish(object.getString("desc_es").trim());
                         newsList.add(news);
                     } catch (JSONException e) {
