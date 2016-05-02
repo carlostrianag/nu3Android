@@ -46,6 +46,14 @@
         In 2015 we will be the leader social company in the Colombian Caribbean, with presence in other regions of the country, due to the quality of our service and the recovery of the population served.
     </string>
 
+    <string name="donate_hint">
+        Enter amount
+    </string>
+
+    <string name="donate_paypal">
+        Donate with Paypal
+    </string>
+
     <string name="values">
         Transparency and Efficiency
         Responsibility
@@ -61,5 +69,8 @@
         Nu3 Foundation in an integral manner cares for over 13,000 beneficiaries (annual average), covering boys, girls, pregnant mothers, breast-feeding mothers, seniors, youngsters and their families, providing Food and Nutritional Safety Programs, together with strategies on Health, Education and Income Generation. The Foundation started in Barranquilla but our actions extended to the Departments of Atlántico, Bolívar, Magdalena and Chocó.
         In this manner, further than providing food and applying an educational model, nu3 Foundation works to help our beneficiaries achieve happiness, to work in their present for constructing a better future, surrounded by equality, equity, satisfaction of their basic needs and a quality of life full of opportunities for progress.
     </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
