@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.nu3.R;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
@@ -53,6 +54,8 @@ public class DonateFragment extends Fragment {
 
     PayPalPayment thingToBuy;
 
+    EditText amountField;
+
 
     public DonateFragment() {
         // Required empty public constructor
@@ -68,16 +71,28 @@ public class DonateFragment extends Fragment {
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
         getActivity().startService(intent);
 
+        amountField = (EditText) rootView.findViewById(R.id.input_amount_donation);
+
         rootView.findViewById(R.id.single_payment_paypal_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                thingToBuy = new PayPalPayment(new BigDecimal("10"), "USD",
-                        "HeadSet", PayPalPayment.PAYMENT_INTENT_SALE);
-                Intent intent = new Intent(getContext(),
-                        PaymentActivity.class);
-                intent.putExtra(PaymentActivity.EXTRA_PAYMENT, thingToBuy);
-                startActivityForResult(intent, REQUEST_CODE_PAYMENT);
+                String amount = String.valueOf(amountField.getText());
 
+                if (!amount.isEmpty()) {
+                    thingToBuy = new PayPalPayment(new BigDecimal(amount), "USD",
+                            "Donation", PayPalPayment.PAYMENT_INTENT_SALE);
+                    Intent intent = new Intent(getContext(),
+                            PaymentActivity.class);
+                    intent.putExtra(PaymentActivity.EXTRA_PAYMENT, thingToBuy);
+                    startActivityForResult(intent, REQUEST_CODE_PAYMENT);
+                }
+            }
+        });
+
+        rootView.findViewById(R.id.pse_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), WebViewActivity.class));
             }
         });
 

@@ -10,15 +10,16 @@
     android:paddingBottom="16dp">
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/input_layout_password"
+        android:id="@+id/input_layout_donation"
         android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/input_password"
+            android:id="@+id/input_amount_donation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:hint="@string/donate_hint" />
 
     </android.support.design.widget.TextInputLayout>
@@ -27,8 +28,16 @@
         android:id="@+id/single_payment_paypal_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
         android:drawableLeft="@drawable/pp_icon"
         android:text="@string/donate_paypal"
+        />
+    <Button
+        android:id="@+id/pse_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/avvillas_icon"
+        android:text="@string/donate_pse"
         />
 
 </LinearLayout>

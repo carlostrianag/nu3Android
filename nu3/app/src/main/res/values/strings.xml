@@ -54,6 +54,10 @@
         Donate with Paypal
     </string>
 
+    <string name="donate_pse">
+        Donate with PSE
+    </string>
+
     <string name="values">
         Transparency and Efficiency
         Responsibility

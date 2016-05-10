@@ -27,6 +27,10 @@
         Donar con Paypal
     </string>
 
+    <string name="donate_pse">
+        Donar con PSE
+    </string>
+
 
 
     <string name="action_settings">Settings</string>
