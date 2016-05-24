@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_our_team) {
             fragmentClass = TeamFragment.class;
         } else if (id == R.id.nav_donate) {
-            fragmentClass = TeamFragment.class;
+            fragmentClass = DonateFragment.class;
         }
         try {
             fragment = (Fragment) fragmentClass.newInstance();
