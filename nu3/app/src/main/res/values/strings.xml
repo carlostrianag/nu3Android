@@ -21,6 +21,8 @@
     <string name="executive_director">Executive Director</string>
     <string name="operations_supervisor">Operations Supervisor</string>
     <string name="accounting_supervisor">Accounting and Administrative Supervisor</string>
+    <string name="operations_subdirector">Operations Subdirector</string>
+    <string name="commercial_supervisor">Commercial Supervisor</string>
 
     <string name="mision_title">
         Mision
@@ -39,15 +41,15 @@
     </string>
 
     <string name="mision">
-        Execute food safety and nutritional programs to diminish the levels of malnutrition in the most vulnerable population. Additionally, to implement education, health and enterprising strategies, which promote the integral development of the families and their children.
+        Carry out food and nutritional security programs for the most vulnerable population. Additionally, implement education, health and entrepreneurship strategies that promote the comprehensive development of the families.
     </string>
 
     <string name="vision">
-        In 2015 we will be the leader social company in the Colombian Caribbean, with presence in other regions of the country, due to the quality of our service and the recovery of the population served.
+        In 2025 we will be recognized in the national and international level for our excellent comprehensive work against malnutrition of Colombian children, promoting opportunities and the social inclusion of the communities served.
     </string>
 
     <string name="donate_hint">
-        Enter amount
+        Enter amount (USD)
     </string>
 
     <string name="donate_paypal">
@@ -58,6 +60,8 @@
         Donate with PSE
     </string>
 
+    <string name="donation_motto">With you I build a decent life</string>
+
     <string name="values">
         Transparency and Efficiency
         Responsibility
@@ -67,11 +71,9 @@
     </string>
 
     <string name="history">
-        Nu3 Foundation, previously Nutrir, was established on December 6, 2005 in the city of Barranquilla, Colombia. It arises in response to the need experienced by a high percentage of the childhood population of the lower income classes in Barranquilla and in the Atlántico Department to have access to a diet with sufficient nutritional and energetic content, necessary for their normal growth and development.
-        It started helping a group of 35 children who were received in the dining-room of the Santamaria Neighborhood in the city of Barranquilla, thus establishing the Foundation\'s first dining-room.
-        In 2011, Nutrir Barranquilla changes its image in order to strengthen and broaden its service channels in favor of the children and families of the Colombian Caribbean, thus the nu3 Foundation \"Feeding the body and the soul\" purpose was born.
-        Nu3 Foundation in an integral manner cares for over 13,000 beneficiaries (annual average), covering boys, girls, pregnant mothers, breast-feeding mothers, seniors, youngsters and their families, providing Food and Nutritional Safety Programs, together with strategies on Health, Education and Income Generation. The Foundation started in Barranquilla but our actions extended to the Departments of Atlántico, Bolívar, Magdalena and Chocó.
-        In this manner, further than providing food and applying an educational model, nu3 Foundation works to help our beneficiaries achieve happiness, to work in their present for constructing a better future, surrounded by equality, equity, satisfaction of their basic needs and a quality of life full of opportunities for progress.
+        nu3 Foundation was constituted on December 5, 2005 in the city of Barranquilla, Colombia. The Foundation arises in response to the need experienced by a large percentage of infant population in Barranquilla and the Atlantico Department, to have access to food with the adequate nutritional and energetic content necessary for their normal growth and development.\n\n
+        In this manner, more than providing food and applying an educational model, nu3 Foundation works for the happiness of our beneficiaries, their present and the construction of a better future surrounded by equality, fairness, satisfied basic needs and a quality of life with opportunities for progress.\n\n
+        Nu3 Foundation comprehensively provides services to more than 19,000 children every year. We serve children (boys and girls), pregnant and breastfeeding mothers, seniors, youngsters and their families, providing Food and Nutritional Security Programs, supplemented with strategies in Health, Education and Income Generation. Initially we served 35 children in the Santamaria Neighborhood Cafeteria in the city of Barranquilla, when we established Foundation’s first cafeteria. Now our interventions cover the Departments of Atlántico, Bolívar, Magdalena, Chocó, Córdoba and Guajira.
     </string>
 
     <!-- TODO: Remove or change this placeholder text -->
