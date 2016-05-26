@@ -35,10 +35,10 @@ public class DonateFragment extends Fragment {
      * - Set to PayPalConfiguration.ENVIRONMENT_NO_NETWORK to kick the tires
      * without communicating to PayPal's servers.
      */
-    private static final String CONFIG_ENVIRONMENT = PayPalConfiguration.ENVIRONMENT_NO_NETWORK;
+    private static final String CONFIG_ENVIRONMENT = PayPalConfiguration.ENVIRONMENT_SANDBOX;
 
     // note that these credentials will differ between live & sandbox environments.
-    private static final String CONFIG_CLIENT_ID = "credentials from developer.paypal.com";
+    private static final String CONFIG_CLIENT_ID = "AbsxDD1Eb4x8ZUyBG1K__9A-3RWn3rGwr4nycYpDmLqW8ieGWI1sJuXvm8WpQone9Gi64nEFDRl6SDzi";
 
     private static final int REQUEST_CODE_PAYMENT = 1;
     private static final int REQUEST_CODE_FUTURE_PAYMENT = 2;
