@@ -60,6 +60,22 @@
         Donate with PSE
     </string>
 
+    <string name="donate_result_ok">
+        Donation was successful
+    </string>
+
+    <string name="donate_result_cancelled">
+        Donation was cancelled
+    </string>
+
+    <string name="donate_result_invalid">
+        Invalid payment
+    </string>
+
+    <string name="donate_result_error">
+        An error occurred with the donation
+    </string>
+
     <string name="donation_motto">With you I build a decent life</string>
 
     <string name="values">

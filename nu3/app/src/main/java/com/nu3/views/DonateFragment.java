@@ -1,20 +1,27 @@
 package com.nu3.views;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.nu3.R;
+import com.paypal.android.sdk.payments.PayPalAuthorization;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
 import com.paypal.android.sdk.payments.PayPalPayment;
 import com.paypal.android.sdk.payments.PayPalService;
 import com.paypal.android.sdk.payments.PaymentActivity;
+import com.paypal.android.sdk.payments.PaymentConfirmation;
+
+import org.json.JSONException;
 
 import java.math.BigDecimal;
 import java.util.Locale;
@@ -36,10 +43,10 @@ public class DonateFragment extends Fragment {
      * - Set to PayPalConfiguration.ENVIRONMENT_NO_NETWORK to kick the tires
      * without communicating to PayPal's servers.
      */
-    private static final String CONFIG_ENVIRONMENT = PayPalConfiguration.ENVIRONMENT_SANDBOX;
+    private static final String CONFIG_ENVIRONMENT = PayPalConfiguration.ENVIRONMENT_PRODUCTION;
 
     // note that these credentials will differ between live & sandbox environments.
-    private static final String CONFIG_CLIENT_ID = "AbsxDD1Eb4x8ZUyBG1K__9A-3RWn3rGwr4nycYpDmLqW8ieGWI1sJuXvm8WpQone9Gi64nEFDRl6SDzi";
+    private static final String CONFIG_CLIENT_ID = "ASAItZI6P5k-AxQYSCd4NnrDTivhOvyajuKHiq_v7sHe3SCdSpFFUnrGQdo1Q8rwvyF6sHgP6jzzGM-h";
 
     private static final int REQUEST_CODE_PAYMENT = 1;
     private static final int REQUEST_CODE_FUTURE_PAYMENT = 2;
@@ -50,12 +57,16 @@ public class DonateFragment extends Fragment {
             .clientId(CONFIG_CLIENT_ID)
                     // The following are only used in PayPalFuturePaymentActivity.
             .merchantName("Fundacion Nu3")
-            .merchantPrivacyPolicyUri(Uri.parse("https://www.example.com/privacy"))
-            .merchantUserAgreementUri(Uri.parse("https://www.example.com/legal"));
+            .merchantPrivacyPolicyUri(Uri.parse("https://www.nu3.co"))
+            .merchantUserAgreementUri(Uri.parse("https://www.nu3.co"));
 
     PayPalPayment thingToBuy;
 
     EditText amountField;
+
+    Snackbar resultSnackbar;
+
+    View rootView;
 
 
     public DonateFragment() {
@@ -67,7 +78,7 @@ public class DonateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_donate, container, false);
+        rootView = inflater.inflate(R.layout.fragment_donate, container, false);
         Intent intent = new Intent(getContext(), PayPalService.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
         getActivity().startService(intent);
@@ -99,6 +110,29 @@ public class DonateFragment extends Fragment {
         });
 
         return rootView;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE_PAYMENT) {
+            if (resultCode == Activity.RESULT_OK) {
+                PaymentConfirmation confirm =
+                        data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
+                if (confirm != null) {
+                    try {
+                        String payment = confirm.getPayment().toJSONObject().toString(4);
+                        resultSnackbar = Snackbar.make(rootView, R.string.donate_result_ok, Snackbar.LENGTH_LONG);
+                    } catch (JSONException e) {
+                        resultSnackbar = Snackbar.make(rootView, R.string.donate_result_error, Snackbar.LENGTH_LONG);
+                    }
+                }
+            } else if (resultCode == Activity.RESULT_CANCELED) {
+                resultSnackbar = Snackbar.make(rootView, R.string.donate_result_cancelled, Snackbar.LENGTH_LONG);
+            } else if (resultCode == PaymentActivity.RESULT_EXTRAS_INVALID) {
+                resultSnackbar = Snackbar.make(rootView, R.string.donate_result_invalid, Snackbar.LENGTH_LONG);
+            }
+        }
+        resultSnackbar.show();
     }
 
 }
