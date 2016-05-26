@@ -12,11 +12,11 @@
         android:orientation="vertical">
         <include layout="@layout/card_schraer" />
         <include layout="@layout/card_zylberblum" />
-        <include layout="@layout/card_callejas" />
+        <include layout="@layout/card_duran" />
+        <include layout="@layout/card_arenas" />
         <include layout="@layout/card_soto" />
-        <include layout="@layout/card_lopez" />
-
-
+        <include layout="@layout/card_otero" />
+        <include layout="@layout/card_bolanos" />
     </LinearLayout>
 
 

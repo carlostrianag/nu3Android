@@ -3,25 +3,13 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#EC312E</item>
+        <item name="colorPrimaryDark">#a3120f</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="Widget.MyApp.Toolbar.Solid" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/colorPrimary</item>
-    </style>
-
-    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="actionBarStyle">@style/MyActionBar</item>
-    </style>
-
-    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
-        <item name="titleTextStyle">@style/MyTitleTextStyle</item>
-    </style>
-
-    <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/colorTextSelectedItem</item>
+        <item name="android:background">#EC312E</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -32,5 +20,16 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyCustomTheme" parent="">
+        <item name="android:actionBarStyle">@style/MyActionBarTheme</item>
+    </style>
+
+    <style name="MyActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#EC312E</item>
+        <item name="android:textColor">@color/colorTextSelectedItem</item>
+    </style>
+
+
 
 </resources>

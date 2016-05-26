@@ -8,7 +8,7 @@
     <string name="nav_news_title">Noticias</string>
     <string name="nav_history_title">Historia</string>
     <string name="nav_our_team_title">Nuestro equipo</string>
-    <string name="nav_vision_title">Misión and visión</string>
+    <string name="nav_vision_title">Misión y visión</string>
     <string name="nav_donate_title">Donar</string>
 
     <!-- Team Names -->
@@ -16,11 +16,13 @@
     <string name="president">Presidenta Junta Directiva</string>
     <string name="vice_president">Vicepresidenta Junta Directiva</string>
     <string name="executive_director">Directora Ejecutiva</string>
-    <string name="operations_supervisor">Jefe de Operaciones</string>
-    <string name="accounting_supervisor">Jefe Contable y Administrativa</string>
+    <string name="operations_subdirector">Subdirectora Técnica</string>
+    <string name="operations_supervisor">Coordinación Área Técnica</string>
+    <string name="accounting_supervisor">Coordinación Administrativa y Financiera</string>
+    <string name="commercial_supervisor">Coordinación Comercial</string>
 
     <string name="donate_hint">
-        Ingrese cantidad
+        Ingrese cantidad (USD)
     </string>
 
     <string name="donate_paypal">
@@ -43,6 +45,8 @@
     </string>
 
     <string name="vision">En el 2025 seremos reconocidos a nivel nacional e internacional, por nuestro excelente trabajo integral en contra de la malnutrición de los niños en Colombia, promoviendo oportunidades e inclusión social a las comunidades atendidas.</string>
+
+    <string name="donation_motto">Contigo contruyo una vida digna</string>
 
     <string name="values">
         Transparencia y eficiencia

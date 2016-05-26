@@ -17,6 +17,7 @@ import com.paypal.android.sdk.payments.PayPalService;
 import com.paypal.android.sdk.payments.PaymentActivity;
 
 import java.math.BigDecimal;
+import java.util.Locale;
 
 
 /**
@@ -79,8 +80,9 @@ public class DonateFragment extends Fragment {
                 String amount = String.valueOf(amountField.getText());
 
                 if (!amount.isEmpty()) {
+                    String foundationNameDonation = Locale.getDefault().getLanguage().equals("es") ? "Donación Fundación nu3" : "nu3 Foundation donation";
                     thingToBuy = new PayPalPayment(new BigDecimal(amount), "USD",
-                            "Donation", PayPalPayment.PAYMENT_INTENT_SALE);
+                            foundationNameDonation, PayPalPayment.PAYMENT_INTENT_SALE);
                     Intent intent = new Intent(getContext(),
                             PaymentActivity.class);
                     intent.putExtra(PaymentActivity.EXTRA_PAYMENT, thingToBuy);

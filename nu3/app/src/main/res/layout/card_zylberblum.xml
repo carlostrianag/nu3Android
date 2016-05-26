@@ -15,7 +15,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:layout_weight="1"
-        android:src="@drawable/zylberblumjpg"/>
+        android:src="@drawable/zylberblum"/>
 
     <LinearLayout
         android:layout_width="0dp"
